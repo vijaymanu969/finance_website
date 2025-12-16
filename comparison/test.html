@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - 72ipo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .test-icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #4285f4;
+            border-radius: 12px;
+            font-size: 24px;
+            line-height: 60px;
+            color: white;
+            margin-bottom: 16px;
+        }
+        .test-title h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 8px 0;
+        }
+        .test-title p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+        .test-content {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="test-header">
+            <div class="test-icon">📊</div>
+            <div class="test-title">
+                <h1>Test Page</h1>
+                <p>This is a test page to check if comparison pages work on Vercel</p>
+            </div>
+        </div>
+        
+        <div class="test-content">
+            <h2>Test Results:</h2>
+            <ul>
+                <li>✅ HTML is loading</li>
+                <li>✅ CSS is working</li>
+                <li>✅ Page structure is correct</li>
+                <li id="js-test">❌ JavaScript not loaded</li>
+            </ul>
+            
+            <p><strong>Navigation Test:</strong></p>
+            <ul>
+                <li><a href="../index.html">← Back to Home</a></li>
+                <li><a href="mainboard-comparison.html">Mainboard Comparison</a></li>
+                <li><a href="sme-comparison.html">SME Comparison</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('js-test').innerHTML = '✅ JavaScript is working';
+            console.log('Test page loaded successfully');
+        });
+    </script>
+</body>
+</html>
