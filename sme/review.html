@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME IPO Review - 72ipo</title>
+    <meta name="description" content="Comprehensive SME IPO reviews and analysis with detailed insights and recommendations">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../mainboard/dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="../mainboard/calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="../mainboard/performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="../mainboard/subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="../mainboard/review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">SME Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">SME Calendar</a>
+                            <a href="performance.html" class="dropdown-item">SME Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">SME Subscription</a>
+                            <a href="review.html" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">SME IPOs</a> > <span>SME IPO Review</span>
+        </div>
+    </div>
+
+    <!-- SME Review Header -->
+    <section class="sme-review-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>SME IPO Review</h1>
+                    <p>Tap a company to view the detailed review.</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search company..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SME Review Table -->
+    <main class="sme-review-main">
+        <div class="container">
+            <div class="sme-review-table-section">
+                <div class="table-wrapper">
+                    <table class="sme-review-table" id="smeReviewTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="company">Company ↕</th>
+                                <th class="sortable" data-sort="open">Open ↕</th>
+                                <th class="sortable" data-sort="close">Close ↕</th>
+                                <th class="sortable" data-sort="listing">Listing ↕</th>
+                                <th class="sortable" data-sort="issue-size">Issue Size ↕</th>
+                                <th class="sortable" data-sort="status">Status</th>
+                                <th class="sortable" data-sort="review">Review</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sme-review-row" data-company="global-ocean">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Global Ocean Logistics India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>17 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>24 Dec 2025</td>
+                                <td>₹30.41 Cr</td>
+                                <td><span class="status-badge upcoming">Upcoming</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="marc-technocrats">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>MARC Technocrats Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>17 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>24 Dec 2025</td>
+                                <td>₹42.59 Cr</td>
+                                <td><span class="status-badge upcoming">Upcoming</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="neptune-logitek">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Neptune Logitek Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>15 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>22 Dec 2025</td>
+                                <td>₹46.62 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="stanbik-agro">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Stanbik Agro Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>₹12.28 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="ashwini-container">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Ashwini Container Movers Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>₹71 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="exim-routes">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Exim Routes Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>₹43.73 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="pajson-agro">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Pajson Agro India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>11 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>18 Dec 2025</td>
+                                <td>₹74.45 Cr</td>
+                                <td><span class="status-badge closed-awaiting">Closed (awaiting listing)</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="hrs-aluglaze">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>HRS Aluglaze Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>11 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>18 Dec 2025</td>
+                                <td>₹50.92 Cr</td>
+                                <td><span class="status-badge closed-awaiting">Closed (awaiting listing)</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="sme-review-row" data-company="unisem-agritech">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Unisem Agritech Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>10 Dec 2025</td>
+                                <td>12 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>₹21.45 Cr</td>
+                                <td><span class="status-badge closed-awaiting">Closed (awaiting listing)</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>    <
+!-- SME Review Modal -->
+    <div class="sme-review-modal" id="smeReviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">SME IPO Review</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Review content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>SME IPOs</h4>
+                    <a href="#">SME Dashboard</a>
+                    <a href="#">SME Calendar</a>
+                    <a href="#">SME Performance Track</a>
+                    <a href="#">SME Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/sme-review.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

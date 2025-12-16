@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME IPO GMP - 72ipo</title>
+    <meta name="description" content="Live SME IPO Grey Market Premium (GMP) rates with real-time updates and detailed trends">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../mainboard/dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="../mainboard/calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="../mainboard/performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="../mainboard/subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="../mainboard/review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../sme/dashboard.html" class="dropdown-item">SME Dashboard</a>
+                            <a href="../sme/calendar.html" class="dropdown-item">SME Calendar</a>
+                            <a href="../sme/performance.html" class="dropdown-item">SME Performance Track</a>
+                            <a href="../sme/subscription.html" class="dropdown-item">SME Subscription</a>
+                            <a href="../sme/review.html" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">GMP</a> > <span>Live SME GMP</span>
+        </div>
+    </div>
+</body>
+</html>    <!--
+ SME GMP Header -->
+    <section class="sme-gmp-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>SME IPO GMP</h1>
+                    <p>Click a company to view detailed GMP trends</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search company..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SME GMP Table -->
+    <main class="sme-gmp-main">
+        <div class="container">
+            <div class="sme-gmp-table-section">
+                <div class="table-wrapper">
+                    <table class="sme-gmp-table" id="smeGmpTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="company">Company ↕</th>
+                                <th class="sortable" data-sort="open">Open ↕</th>
+                                <th class="sortable" data-sort="close">Close ↕</th>
+                                <th class="sortable" data-sort="listing">Listing Date ↕</th>
+                                <th class="sortable" data-sort="ipo-price">IPO Price(₹) ↕</th>
+                                <th class="sortable" data-sort="gmp">Current GMP (₹) ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sme-gmp-row" data-company="global-ocean">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Global Ocean Logistics India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>17 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>24 Dec 2025</td>
+                                <td>78</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value neutral">₹ 0</span>
+                                        <span class="sme-gmp-percentage neutral">( 0%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sme-gmp-row" data-company="marc-technocrats">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>MARC Technocrats Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>17 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>24 Dec 2025</td>
+                                <td>93</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value neutral">₹ 0</span>
+                                        <span class="sme-gmp-percentage neutral">( 0%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sme-gmp-row" data-company="neptune-logitek">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Neptune Logitek Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>15 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>22 Dec 2025</td>
+                                <td>126</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value neutral">₹ 0</span>
+                                        <span class="sme-gmp-percentage neutral">( 0%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sme-gmp-row" data-company="stanbik-agro">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Stanbik Agro Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>30</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value neutral">₹ 0</span>
+                                        <span class="sme-gmp-percentage neutral">( 0%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sme-gmp-row" data-company="ashwini-container">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Ashwini Container Movers Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>142</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value positive">₹ 3</span>
+                                        <span class="sme-gmp-percentage positive">( 2.11%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sme-gmp-row" data-company="exim-routes">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Exim Routes Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>88</td>
+                                <td>
+                                    <div class="sme-gmp-cell">
+                                        <span class="sme-gmp-value positive">₹ 6</span>
+                                        <span class="sme-gmp-percentage positive">( 6.82%)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main> 
+   <!-- SME GMP Details Modal -->
+    <div class="sme-gmp-details-modal" id="smeGmpDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">SME GMP Trend Details</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- SME GMP trend details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>SME GMP Tracking</h4>
+                    <a href="#">Live SME GMP</a>
+                    <a href="#">SME GMP Trends</a>
+                    <a href="#">SME GMP Analysis</a>
+                    <a href="#">SME Market Insights</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/sme-gmp.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

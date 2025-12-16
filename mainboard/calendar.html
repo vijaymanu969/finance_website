@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Calendar - 72ipo</title>
+    <meta name="description" content="Complete IPO calendar with dates, status tracking, and detailed information for all upcoming and ongoing IPOs">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#sme-dashboard" class="dropdown-item">SME Dashboard</a>
+                            <a href="#sme-calendar" class="dropdown-item">SME Calendar</a>
+                            <a href="#sme-performance" class="dropdown-item">SME Performance Track</a>
+                            <a href="#sme-subscription" class="dropdown-item">SME Subscription</a>
+                            <a href="#sme-review" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">Mainboard IPOs</a> > <span>IPO Calendar</span>
+        </div>
+    </div>
+
+    <!-- Calendar Header -->
+    <section class="calendar-header">
+        <div class="container">
+            <h1>IPO Calendar</h1>
+            <p>Track all IPO dates, statuses, and important milestones in one comprehensive calendar view</p>
+        </div>
+    </section>
+</body>
+</html> 
+   <!-- Calendar Controls -->
+    <section class="calendar-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <!-- Status Legend -->
+                <div class="status-legend">
+                    <div class="legend-item">
+                        <span class="status-dot open"></span>
+                        <span>Open</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-dot closed"></span>
+                        <span>Closed</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-dot allotment"></span>
+                        <span>Allotment</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-dot refund"></span>
+                        <span>Refund</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-dot listed"></span>
+                        <span>Listed</span>
+                    </div>
+                </div>
+
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="month">Month View</button>
+                    <button class="view-btn" data-view="week">Week View</button>
+                    <button class="view-btn" data-view="list">List View</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Main -->
+    <main class="calendar-main">
+        <div class="container">
+            <div class="calendar-container">
+                <!-- Calendar Navigation -->
+                <div class="calendar-nav">
+                    <button class="nav-btn prev" id="prevMonth">‹</button>
+                    <h2 class="calendar-title" id="calendarTitle">December 2025</h2>
+                    <button class="nav-btn next" id="nextMonth">›</button>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Days Header -->
+                    <div class="calendar-header-row">
+                        <div class="day-header">Sun</div>
+                        <div class="day-header">Mon</div>
+                        <div class="day-header">Tue</div>
+                        <div class="day-header">Wed</div>
+                        <div class="day-header">Thu</div>
+                        <div class="day-header">Fri</div>
+                        <div class="day-header">Sat</div>
+                    </div>
+
+                    <!-- Calendar Days -->
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Days will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- IPO Details Panel -->
+                <div class="ipo-details-panel" id="ipoDetailsPanel">
+                    <div class="panel-header">
+                        <h3>IPO Details</h3>
+                        <button class="close-panel" id="closePanel">×</button>
+                    </div>
+                    <div class="panel-content" id="panelContent">
+                        <p>Click on a calendar date to view IPO details</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming IPOs List -->
+            <section class="upcoming-ipos">
+                <div class="section-header">
+                    <h2>📅 Upcoming IPOs This Month</h2>
+                    <div class="filter-options">
+                        <select class="sector-filter">
+                            <option value="all">All Sectors</option>
+                            <option value="tech">Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="auto">Automobile</option>
+                            <option value="retail">Retail</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ipo-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date-number">02</div>
+                            <div class="date-month">Dec</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="ipo-card">
+                                <div class="ipo-header">
+                                    <h3>Bajaj Housing Finance</h3>
+                                    <span class="sector-tag finance">NBFC</span>
+                                </div>
+                                <div class="ipo-details">
+                                    <div class="detail-item">
+                                        <span class="label">Price Band:</span>
+                                        <span class="value">₹66 - ₹70</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Issue Size:</span>
+                                        <span class="value">₹6,560 Cr</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Close Date:</span>
+                                        <span class="value">Dec 04, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="ipo-status">
+                                    <span class="status-badge open">Open Now</span>
+                                    <span class="subscription">Subscription: 45.6x</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date-number">05</div>
+                            <div class="date-month">Dec</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="ipo-card">
+                                <div class="ipo-header">
+                                    <h3>NTPC Green Energy</h3>
+                                    <span class="sector-tag power">Power</span>
+                                </div>
+                                <div class="ipo-details">
+                                    <div class="detail-item">
+                                        <span class="label">Price Band:</span>
+                                        <span class="value">₹102 - ₹108</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Issue Size:</span>
+                                        <span class="value">₹10,000 Cr</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Close Date:</span>
+                                        <span class="value">Dec 07, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="ipo-status">
+                                    <span class="status-badge upcoming">Upcoming</span>
+                                    <span class="gmp">GMP: +₹8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date-number">11</div>
+                            <div class="date-month">Dec</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="ipo-card">
+                                <div class="ipo-header">
+                                    <h3>Vishal Mega Mart</h3>
+                                    <span class="sector-tag retail">Retail</span>
+                                </div>
+                                <div class="ipo-details">
+                                    <div class="detail-item">
+                                        <span class="label">Price Band:</span>
+                                        <span class="value">₹74 - ₹78</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Issue Size:</span>
+                                        <span class="value">₹8,000 Cr</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Close Date:</span>
+                                        <span class="value">Dec 13, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="ipo-status">
+                                    <span class="status-badge upcoming">Upcoming</span>
+                                    <span class="gmp">GMP: ₹0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <div class="date-number">15</div>
+                            <div class="date-month">Dec</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="ipo-card">
+                                <div class="ipo-header">
+                                    <h3>Hyundai Motor India</h3>
+                                    <span class="sector-tag auto">Auto</span>
+                                </div>
+                                <div class="ipo-details">
+                                    <div class="detail-item">
+                                        <span class="label">Price Band:</span>
+                                        <span class="value">₹1,865 - ₹1,960</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Issue Size:</span>
+                                        <span class="value">₹27,870 Cr</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Close Date:</span>
+                                        <span class="value">Dec 17, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="ipo-status">
+                                    <span class="status-badge upcoming">Upcoming</span>
+                                    <span class="gmp">GMP: +₹25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main> 
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Mainboard IPOs</h4>
+                    <a href="#">Dashboard</a>
+                    <a href="#">IPO Calendar</a>
+                    <a href="#">Performance Track</a>
+                    <a href="#">Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/calendar.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

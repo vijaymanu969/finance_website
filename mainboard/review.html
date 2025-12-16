@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainboard IPO Review - 72ipo</title>
+    <meta name="description" content="Comprehensive IPO reviews and analysis for mainboard listings with detailed insights and recommendations">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#sme-dashboard" class="dropdown-item">SME Dashboard</a>
+                            <a href="#sme-calendar" class="dropdown-item">SME Calendar</a>
+                            <a href="#sme-performance" class="dropdown-item">SME Performance Track</a>
+                            <a href="#sme-subscription" class="dropdown-item">SME Subscription</a>
+                            <a href="#sme-review" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">Mainboard IPOs</a> > <span>IPO Review</span>
+        </div>
+    </div>
+
+    <!-- Review Header -->
+    <section class="review-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Mainboard IPO Review</h1>
+                    <p>Tap a company to view the detailed review.</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search company..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Table -->
+    <main class="review-main">
+        <div class="container">
+            <div class="review-table-section">
+                <div class="table-wrapper">
+                    <table class="review-table" id="reviewTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="company">Company ↕</th>
+                                <th class="sortable" data-sort="open">Open ↕</th>
+                                <th class="sortable" data-sort="close">Close ↕</th>
+                                <th class="sortable" data-sort="listing">Listing ↕</th>
+                                <th class="sortable" data-sort="issue-size">Issue Size ↕</th>
+                                <th class="sortable" data-sort="status">Status</th>
+                                <th class="sortable" data-sort="review">Review</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="review-row" data-company="ksh">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>KSH International</strong>
+                                    </div>
+                                </td>
+                                <td>16 Dec 2025</td>
+                                <td>18 Dec 2025</td>
+                                <td>23 Dec 2025</td>
+                                <td>₹710 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge not-available">Not Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="icici">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>ICICI Prudential Asset Management Co</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>19 Dec 2025</td>
+                                <td>₹10,602.65 Cr</td>
+                                <td><span class="status-badge open">Open Now</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="park-medi">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Park Medi World Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>10 Dec 2025</td>
+                                <td>12 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>₹919 Cr</td>
+                                <td><span class="status-badge closed-awaiting">Closed (awaiting listing)</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="nephrocare">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Nephrocare Health Services Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>10 Dec 2025</td>
+                                <td>12 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>₹871.05 Cr</td>
+                                <td><span class="status-badge closed-awaiting">Closed (awaiting listing)</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="corona">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Corona Remedies Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>08 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>₹655.37 Cr</td>
+                                <td><span class="status-badge listed">Listed</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="wakefit">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Wakefit Innovations Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>08 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>₹1,288.89 Cr</td>
+                                <td><span class="status-badge listed">Listed</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="aequs">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Aequs Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>₹921.81 Cr</td>
+                                <td><span class="status-badge listed">Listed</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="vidya">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Vidya Wires Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>₹300.01 Cr</td>
+                                <td><span class="status-badge listed">Listed</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                            <tr class="review-row" data-company="meesho">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Meesho Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>₹5,421.2 Cr</td>
+                                <td><span class="status-badge listed">Listed</span></td>
+                                <td><span class="review-badge available">Available</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>    <
+!-- Review Modal -->
+    <div class="review-modal" id="reviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">IPO Review</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Review content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Mainboard IPOs</h4>
+                    <a href="#">Dashboard</a>
+                    <a href="#">IPO Calendar</a>
+                    <a href="#">Performance Track</a>
+                    <a href="#">Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/review.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

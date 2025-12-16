@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME Subscriptions - 72ipo</title>
+    <meta name="description" content="Real-time SME IPO subscription data with detailed category-wise breakdown and analysis">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../mainboard/dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="../mainboard/calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="../mainboard/performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="../mainboard/subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="../mainboard/review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">SME Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">SME Calendar</a>
+                            <a href="performance.html" class="dropdown-item">SME Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">SME Subscription</a>
+                            <a href="review.html" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">SME IPOs</a> > <span>SME Subscriptions</span>
+        </div>
+    </div>
+
+    <!-- SME Subscription Header -->
+    <section class="sme-subscription-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>SME Subscriptions</h1>
+                    <p>Click a company to view detailed subscriptions</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search company..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SME Subscription Table -->
+    <main class="sme-subscription-main">
+        <div class="container">
+            <div class="sme-subscription-table-section">
+                <div class="table-wrapper">
+                    <table class="sme-subscription-table" id="smeSubscriptionTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="company">Company ↕</th>
+                                <th class="sortable" data-sort="open">Open ↕</th>
+                                <th class="sortable" data-sort="close">Close ↕</th>
+                                <th class="sortable" data-sort="issue-size">Issue Size (Cr) ↕</th>
+                                <th class="sortable" data-sort="anchor">Anchor ↕</th>
+                                <th class="sortable" data-sort="qib">QIB ex Anchor ↕</th>
+                                <th class="sortable" data-sort="nii">NII ↕</th>
+                                <th class="sortable" data-sort="bnii">BNII ↕</th>
+                                <th class="sortable" data-sort="snii">SNII ↕</th>
+                                <th class="sortable" data-sort="retail">Retail ↕</th>
+                                <th class="sortable" data-sort="employees">Employees ↕</th>
+                                <th class="sortable" data-sort="others">Others ↕</th>
+                                <th class="sortable" data-sort="total">Total ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sme-subscription-row" data-company="neptune-logitek">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Neptune Logitek Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>15 Dec 2025</td>
+                                <td>17 Dec 2025</td>
+                                <td>46.62</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>0.33x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>1.73x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription low">1.03x</span></td>
+                            </tr>
+                            <tr class="sme-subscription-row" data-company="stanbik-agro">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Stanbik Agro Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>12.28</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>0.72x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>0.48x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription low">0.6x</span></td>
+                            </tr>
+                            <tr class="sme-subscription-row" data-company="ashwini-container">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Ashwini Container Movers Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>71</td>
+                                <td>1x</td>
+                                <td>0x</td>
+                                <td>0.26x</td>
+                                <td>0.34x</td>
+                                <td>0.09x</td>
+                                <td>0.53x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription low">0.32x</span></td>
+                            </tr>
+                            <tr class="sme-subscription-row" data-company="exim-routes">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Exim Routes Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Dec 2025</td>
+                                <td>16 Dec 2025</td>
+                                <td>43.73</td>
+                                <td>1x</td>
+                                <td>0x</td>
+                                <td>2.64x</td>
+                                <td>3.19x</td>
+                                <td>1.56x</td>
+                                <td>1.13x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription medium">1.13x</span></td>
+                            </tr>
+                            <tr class="sme-subscription-row" data-company="pajson-agro">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Pajson Agro India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>11 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>74.45</td>
+                                <td>1x</td>
+                                <td>10.92x</td>
+                                <td>6.86x</td>
+                                <td>7.73x</td>
+                                <td>5.14x</td>
+                                <td>3.85x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription high">6.5x</span></td>
+                            </tr>
+                            <tr class="sme-subscription-row" data-company="hrs-aluglaze">
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>HRS Aluglaze Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>11 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>50.92</td>
+                                <td>1x</td>
+                                <td>19.48x</td>
+                                <td>82.13x</td>
+                                <td>98.16x</td>
+                                <td>50.07x</td>
+                                <td>49.54x</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="total-subscription very-high">44.83x</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>    <!--
+ SME Subscription Modal -->
+    <div class="sme-subscription-modal" id="smeSubscriptionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detailed SME Subscription Data</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Subscription details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>SME IPOs</h4>
+                    <a href="#">SME Dashboard</a>
+                    <a href="#">SME Calendar</a>
+                    <a href="#">SME Performance Track</a>
+                    <a href="#">SME Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/sme-subscription.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

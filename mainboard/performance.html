@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Performance Track - 72ipo</title>
+    <meta name="description" content="Track IPO performance with detailed analysis, listing gains, and current market prices">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#sme-dashboard" class="dropdown-item">SME Dashboard</a>
+                            <a href="#sme-calendar" class="dropdown-item">SME Calendar</a>
+                            <a href="#sme-performance" class="dropdown-item">SME Performance Track</a>
+                            <a href="#sme-subscription" class="dropdown-item">SME Subscription</a>
+                            <a href="#sme-review" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">Mainboard IPOs</a> > <span>IPO Performance Track</span>
+        </div>
+    </div>
+
+    <!-- Performance Header -->
+    <section class="performance-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>IPO Performance Tracker</h1>
+                    <p>Track real-time performance of all listed IPOs with detailed analysis and market insights</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search company..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>    <!
+-- Performance Controls -->
+    <section class="performance-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="performance-tabs">
+                    <button class="perf-tab active" data-tab="total">Total Return</button>
+                    <button class="perf-tab" data-tab="listing">Listing Gain</button>
+                    <button class="perf-tab" data-tab="current">Listing to Current</button>
+                </div>
+                <div class="filter-controls">
+                    <select class="time-filter">
+                        <option value="all">All Time</option>
+                        <option value="1m">Last 1 Month</option>
+                        <option value="3m">Last 3 Months</option>
+                        <option value="6m">Last 6 Months</option>
+                        <option value="1y">Last 1 Year</option>
+                    </select>
+                    <select class="sector-filter">
+                        <option value="all">All Sectors</option>
+                        <option value="tech">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="auto">Automobile</option>
+                        <option value="retail">Retail</option>
+                    </select>
+                </div>
+            </div>
+            <div class="performance-note">
+                <p>Based on gain from issue price to current price (total return)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Summary -->
+    <section class="performance-summary">
+        <div class="container">
+            <div class="summary-grid">
+                <div class="summary-section">
+                    <h3>🚀 Most Advanced</h3>
+                    <div class="performance-list">
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Meesho Ltd</strong>
+                                <span class="ticker">MEESHO</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar positive" style="width: 65%"></div>
+                                <span class="perf-value positive">+65.54%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Billionbrains Garage Ventures Ltd</strong>
+                                <span class="ticker">GROWW</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar positive" style="width: 45%"></div>
+                                <span class="perf-value positive">+45.15%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Midwest Ltd</strong>
+                                <span class="ticker">MIDWESTLTD</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar positive" style="width: 43%"></div>
+                                <span class="perf-value positive">+43.32%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>LG Electronics India Ltd</strong>
+                                <span class="ticker">LGEINDIA</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar positive" style="width: 38%"></div>
+                                <span class="perf-value positive">+37.87%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Corona Remedies Ltd</strong>
+                                <span class="ticker">CORONA</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar positive" style="width: 35%"></div>
+                                <span class="perf-value positive">+34.77%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <h3>📉 Most Declined</h3>
+                    <div class="performance-list">
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Glottis Ltd</strong>
+                                <span class="ticker">GLOTTIS</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar negative" style="width: 53%"></div>
+                                <span class="perf-value negative">-52.89%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Om Freight Forwarders Ltd</strong>
+                                <span class="ticker">OMFREIGHT</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar negative" style="width: 33%"></div>
+                                <span class="perf-value negative">-33.33%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Excelsoft Technologies Ltd</strong>
+                                <span class="ticker">EXCELSOFT</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar negative" style="width: 20%"></div>
+                                <span class="perf-value negative">-20.19%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Orkla India Ltd</strong>
+                                <span class="ticker">ORKLAINDIA</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar negative" style="width: 16%"></div>
+                                <span class="perf-value negative">-15.96%</span>
+                            </div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="company-info">
+                                <strong>Emmvee Photovoltaic Power Ltd</strong>
+                                <span class="ticker">EMMVEE</span>
+                            </div>
+                            <div class="perf-bar-container">
+                                <div class="perf-bar negative" style="width: 12%"></div>
+                                <span class="perf-value negative">-11.97%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+ <!-- Performance Table -->
+    <main class="performance-main">
+        <div class="container">
+            <div class="performance-table-section">
+                <div class="table-wrapper">
+                    <table class="performance-table" id="performanceTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="company">Company ↕</th>
+                                <th class="sortable" data-sort="open">Open ↕</th>
+                                <th class="sortable" data-sort="close">Close ↕</th>
+                                <th class="sortable" data-sort="listing">Listing ↕</th>
+                                <th class="sortable" data-sort="issue-size">Issue Size (Cr) ↕</th>
+                                <th class="sortable" data-sort="issue-price">Issue Price ↕</th>
+                                <th class="sortable" data-sort="listed-price">Listed Price ↕</th>
+                                <th class="sortable" data-sort="current-price">Current Price ↕</th>
+                                <th class="sortable" data-sort="performance">Performance ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Wakefit Innovations Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>08 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>1,288.89</td>
+                                <td>₹195</td>
+                                <td>₹195</td>
+                                <td>₹198.38</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+1.73%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Corona Remedies Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>08 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>15 Dec 2025</td>
+                                <td>655.37</td>
+                                <td>₹1,062</td>
+                                <td>₹1,470</td>
+                                <td>₹1,431.3</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+34.77%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Meesho Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>5,421.2</td>
+                                <td>₹111</td>
+                                <td>₹171.82</td>
+                                <td>₹183.75</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+65.54%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Vidya Wires Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>300.01</td>
+                                <td>₹52</td>
+                                <td>₹57.58</td>
+                                <td>₹50.51</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value negative">-2.87%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Aequs Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>03 Dec 2025</td>
+                                <td>05 Dec 2025</td>
+                                <td>10 Dec 2025</td>
+                                <td>921.81</td>
+                                <td>₹124</td>
+                                <td>₹138.97</td>
+                                <td>₹140.17</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+13.04%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Sudeep Pharma Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>21 Nov 2025</td>
+                                <td>25 Nov 2025</td>
+                                <td>28 Nov 2025</td>
+                                <td>895</td>
+                                <td>₹593</td>
+                                <td>₹730</td>
+                                <td>₹659</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+11.13%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Excelsoft Technologies Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>19 Nov 2025</td>
+                                <td>21 Nov 2025</td>
+                                <td>26 Nov 2025</td>
+                                <td>500</td>
+                                <td>₹120</td>
+                                <td>₹135</td>
+                                <td>₹95.77</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value negative">-20.19%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Capillary Technologies India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>14 Nov 2025</td>
+                                <td>18 Nov 2025</td>
+                                <td>21 Nov 2025</td>
+                                <td>877.5</td>
+                                <td>₹577</td>
+                                <td>₹571.9</td>
+                                <td>₹687.5</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+19.15%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Fujiyama Power Systems Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>13 Nov 2025</td>
+                                <td>17 Nov 2025</td>
+                                <td>20 Nov 2025</td>
+                                <td>828</td>
+                                <td>₹228</td>
+                                <td>₹220</td>
+                                <td>₹201.27</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value negative">-11.73%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <strong>Tenneco Clean Air India Ltd</strong>
+                                    </div>
+                                </td>
+                                <td>12 Nov 2025</td>
+                                <td>14 Nov 2025</td>
+                                <td>19 Nov 2025</td>
+                                <td>3,600</td>
+                                <td>₹397</td>
+                                <td>₹505</td>
+                                <td>₹463.35</td>
+                                <td>
+                                    <div class="performance-cell">
+                                        <span class="perf-chart">📊</span>
+                                        <span class="perf-value positive">+16.72%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <div class="pagination-info">
+                        Showing 1-20 of 29 results
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="page-btn" disabled>Previous</button>
+                        <span class="page-info">Page 1 / 2</span>
+                        <button class="page-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Mainboard IPOs</h4>
+                    <a href="#">Dashboard</a>
+                    <a href="#">IPO Calendar</a>
+                    <a href="#">Performance Track</a>
+                    <a href="#">Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/performance.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

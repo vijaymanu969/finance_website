@@ -5,22 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceHub - IPO, Stock Market & Investment News</title>
     <meta name="description" content="Get latest IPO information, stock broker reviews, market analysis and investment tips. Your trusted source for financial information.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <a href="/" class="logo">
-                    <span class="logo-icon">📈</span>
-                    <span class="logo-text">FinanceHub</span>
+                    <span class="logo-text">72ipo</span>
                 </a>
                 <nav class="nav">
-                    <a href="#ipo">IPO</a>
-                    <a href="#brokers">Brokers</a>
-                    <a href="#market">Market</a>
-                    <a href="#news">News</a>
-                    <a href="#tools">Tools</a>
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="mainboard/dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="mainboard/calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="mainboard/performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="mainboard/subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="mainboard/review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="sme/dashboard.html" class="dropdown-item">SME Dashboard</a>
+                            <a href="sme/calendar.html" class="dropdown-item">SME Calendar</a>
+                            <a href="sme/performance.html" class="dropdown-item">SME Performance Track</a>
+                            <a href="sme/subscription.html" class="dropdown-item">SME Subscription</a>
+                            <a href="sme/review.html" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="comparison/mainboard-comparison.html" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="comparison/sme-comparison.html" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
                 </nav>
                 <button class="mobile-menu-btn">☰</button>
             </div>
@@ -341,6 +375,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

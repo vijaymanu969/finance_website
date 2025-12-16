@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainboard IPO Dashboard - 72ipo</title>
+    <meta name="description" content="Complete dashboard for mainboard IPOs - live updates, performance tracking, and detailed analysis">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#sme-dashboard" class="dropdown-item">SME Dashboard</a>
+                            <a href="#sme-calendar" class="dropdown-item">SME Calendar</a>
+                            <a href="#sme-performance" class="dropdown-item">SME Performance Track</a>
+                            <a href="#sme-subscription" class="dropdown-item">SME Subscription</a>
+                            <a href="#sme-review" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">Mainboard IPOs</a> > <span>Dashboard</span>
+        </div>
+    </div>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1>Mainboard IPO Dashboard</h1>
+            <p>Real-time tracking of mainboard IPO performance, subscriptions, and market data</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Controls -->
+    <section class="dashboard-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All <span class="count">25</span></button>
+                    <button class="filter-tab" data-filter="open">Open</button>
+                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-tab" data-filter="closed">Closed</button>
+                    <button class="filter-tab" data-filter="listed">Listed</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search companies..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
+   <!-- Dashboard Stats -->
+    <section class="dashboard-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Active IPOs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <h3>₹8,450 Cr</h3>
+                        <p>Total Issue Size</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3>85%</h3>
+                        <p>Avg Subscription</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>+24%</h3>
+                        <p>Avg Listing Gain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Left Content -->
+                <div class="dashboard-left">
+                    <!-- Live IPOs Table -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2>🔴 Live IPOs</h2>
+                            <div class="filter-tabs">
+                                <button class="tab-btn active">All</button>
+                                <button class="tab-btn">Open</button>
+                                <button class="tab-btn">Upcoming</button>
+                                <button class="tab-btn">Closed</button>
+                            </div>
+                        </div>
+                        <div class="ipo-dashboard-table">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Price Band</th>
+                                        <th>Open Date</th>
+                                        <th>Close Date</th>
+                                        <th>Subscription</th>
+                                        <th>GMP</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="ipo-row open">
+                                        <td>
+                                            <div class="company-info">
+                                                <strong>Bajaj Housing Finance</strong>
+                                                <span class="company-type">NBFC</span>
+                                            </div>
+                                        </td>
+                                        <td>₹66 - ₹70</td>
+                                        <td>Sep 09, 2025</td>
+                                        <td>Sep 11, 2025</td>
+                                        <td><span class="subscription high">156.87x</span></td>
+                                        <td><span class="gmp positive">+₹15</span></td>
+                                        <td><span class="badge open">Open</span></td>
+                                    </tr>
+                                    <tr class="ipo-row upcoming">
+                                        <td>
+                                            <div class="company-info">
+                                                <strong>Hyundai Motor India</strong>
+                                                <span class="company-type">Auto</span>
+                                            </div>
+                                        </td>
+                                        <td>₹1,865 - ₹1,960</td>
+                                        <td>Oct 15, 2025</td>
+                                        <td>Oct 17, 2025</td>
+                                        <td><span class="subscription">-</span></td>
+                                        <td><span class="gmp neutral">₹0</span></td>
+                                        <td><span class="badge upcoming">Upcoming</span></td>
+                                    </tr>
+                                    <tr class="ipo-row open">
+                                        <td>
+                                            <div class="company-info">
+                                                <strong>NTPC Green Energy</strong>
+                                                <span class="company-type">Power</span>
+                                            </div>
+                                        </td>
+                                        <td>₹102 - ₹108</td>
+                                        <td>Nov 19, 2025</td>
+                                        <td>Nov 22, 2025</td>
+                                        <td><span class="subscription medium">2.45x</span></td>
+                                        <td><span class="gmp positive">+₹8</span></td>
+                                        <td><span class="badge open">Open</span></td>
+                                    </tr>
+                                    <tr class="ipo-row closed">
+                                        <td>
+                                            <div class="company-info">
+                                                <strong>Swiggy Limited</strong>
+                                                <span class="company-type">Tech</span>
+                                            </div>
+                                        </td>
+                                        <td>₹371 - ₹390</td>
+                                        <td>Nov 06, 2025</td>
+                                        <td>Nov 08, 2025</td>
+                                        <td><span class="subscription high">3.59x</span></td>
+                                        <td><span class="gmp negative">-₹5</span></td>
+                                        <td><span class="badge closed">Closed</span></td>
+                                    </tr>
+                                    <tr class="ipo-row upcoming">
+                                        <td>
+                                            <div class="company-info">
+                                                <strong>Vishal Mega Mart</strong>
+                                                <span class="company-type">Retail</span>
+                                            </div>
+                                        </td>
+                                        <td>₹74 - ₹78</td>
+                                        <td>Dec 11, 2025</td>
+                                        <td>Dec 13, 2025</td>
+                                        <td><span class="subscription">-</span></td>
+                                        <td><span class="gmp neutral">₹0</span></td>
+                                        <td><span class="badge upcoming">Upcoming</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Performance Chart Section -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2>📊 IPO Performance Trends</h2>
+                            <select class="time-filter">
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                                <option>Last 6 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <p>📈 Interactive Performance Chart</p>
+                                <span>Chart showing listing gains, subscription trends, and market performance</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>        
+        <!-- Right Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <!-- Quick Actions -->
+                    <div class="widget">
+                        <h3>⚡ Quick Actions</h3>
+                        <div class="quick-actions">
+                            <a href="#" class="action-btn primary">Apply for IPO</a>
+                            <a href="#" class="action-btn secondary">Check Allotment</a>
+                            <a href="#" class="action-btn secondary">GMP Tracker</a>
+                            <a href="#" class="action-btn secondary">Set Alerts</a>
+                        </div>
+                    </div>
+
+                    <!-- Market Sentiment -->
+                    <div class="widget">
+                        <h3>📊 Market Sentiment</h3>
+                        <div class="sentiment-meter">
+                            <div class="sentiment-bar">
+                                <div class="sentiment-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="sentiment-labels">
+                                <span>Bearish</span>
+                                <span class="current">Bullish (75%)</span>
+                            </div>
+                        </div>
+                        <div class="sentiment-stats">
+                            <div class="sentiment-item">
+                                <span class="label">Avg Subscription:</span>
+                                <span class="value positive">4.2x</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="label">Success Rate:</span>
+                                <span class="value positive">82%</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="label">Avg Listing Gain:</span>
+                                <span class="value positive">+18.5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Performers -->
+                    <div class="widget">
+                        <h3>🏆 Top Performers (YTD)</h3>
+                        <div class="top-performers">
+                            <div class="performer-item">
+                                <div class="performer-info">
+                                    <strong>Zomato Ltd</strong>
+                                    <span class="sector">Food Tech</span>
+                                </div>
+                                <span class="gain positive">+245%</span>
+                            </div>
+                            <div class="performer-item">
+                                <div class="performer-info">
+                                    <strong>Paytm</strong>
+                                    <span class="sector">Fintech</span>
+                                </div>
+                                <span class="gain positive">+156%</span>
+                            </div>
+                            <div class="performer-item">
+                                <div class="performer-info">
+                                    <strong>Nykaa</strong>
+                                    <span class="sector">E-commerce</span>
+                                </div>
+                                <span class="gain positive">+89%</span>
+                            </div>
+                            <div class="performer-item">
+                                <div class="performer-info">
+                                    <strong>CarTrade</strong>
+                                    <span class="sector">Auto Tech</span>
+                                </div>
+                                <span class="gain negative">-12%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Highlights -->
+                    <div class="widget">
+                        <h3>🎯 Upcoming Highlights</h3>
+                        <div class="upcoming-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-date">Dec 15</div>
+                                <div class="highlight-info">
+                                    <strong>LIC IPO</strong>
+                                    <span>₹902-₹949 | Insurance</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-date">Dec 20</div>
+                                <div class="highlight-info">
+                                    <strong>Delhivery IPO</strong>
+                                    <span>₹462-₹487 | Logistics</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-date">Jan 05</div>
+                                <div class="highlight-info">
+                                    <strong>Oyo IPO</strong>
+                                    <span>₹100-₹125 | Hospitality</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="ad-banner sidebar-ad">
+                        <div class="ad-placeholder vertical">
+                            <span>Advertisement</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Mainboard IPOs</h4>
+                    <a href="#">Dashboard</a>
+                    <a href="#">IPO Calendar</a>
+                    <a href="#">Performance Track</a>
+                    <a href="#">Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

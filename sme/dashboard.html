@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME IPO Dashboard - 72ipo</title>
+    <meta name="description" content="Complete dashboard for SME IPOs - live updates, performance tracking, and detailed analysis">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">72ipo</span>
+                </a>
+                <nav class="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#mainboard" class="nav-link">Mainboard IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../mainboard/dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="../mainboard/calendar.html" class="dropdown-item">IPO Calendar</a>
+                            <a href="../mainboard/performance.html" class="dropdown-item">IPO Performance Track</a>
+                            <a href="../mainboard/subscription.html" class="dropdown-item">IPO Subscription</a>
+                            <a href="../mainboard/review.html" class="dropdown-item">IPO Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#sme" class="nav-link">SME IPOs <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">SME Dashboard</a>
+                            <a href="calendar.html" class="dropdown-item">SME Calendar</a>
+                            <a href="performance.html" class="dropdown-item">SME Performance Track</a>
+                            <a href="subscription.html" class="dropdown-item">SME Subscription</a>
+                            <a href="review.html" class="dropdown-item">SME Review</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#gmp" class="nav-link">GMP <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../gmp/mainboard-gmp.html" class="dropdown-item">Live Mainboard GMP</a>
+                            <a href="../gmp/sme-gmp.html" class="dropdown-item">Live SME GMP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#comparison" class="nav-link">IPO Comparison <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#mainboard-comparison" class="dropdown-item">Mainboard Comparison</a>
+                            <a href="#sme-comparison" class="dropdown-item">SME Comparison</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#calculator" class="nav-link">IPO Calculator</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#learn" class="nav-link">Learn IPO</a>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> > <a href="#">SME IPOs</a> > <span>SME Dashboard</span>
+        </div>
+    </div>
+
+    <!-- SME Dashboard Header -->
+    <section class="sme-dashboard-header">
+        <div class="container">
+            <h1>SME IPO Dashboard</h1>
+        </div>
+    </section>
+
+    <!-- SME Dashboard Controls -->
+    <section class="sme-dashboard-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All <span class="count">60</span></button>
+                    <button class="filter-tab" data-filter="open">Open</button>
+                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-tab" data-filter="closed">Closed</button>
+                    <button class="filter-tab" data-filter="listed">Listed</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search companies..." class="search-input" id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>    <!-- 
+SME IPO Cards Grid -->
+    <main class="sme-dashboard-main">
+        <div class="container">
+            <div class="sme-cards-grid" id="smeCardsGrid">
+                <!-- SME IPO Card 1 -->
+                <div class="sme-card" data-status="upcoming" data-company="marc-technocrats">
+                    <div class="sme-card-header">
+                        <h3>MARC Technocrats Ltd</h3>
+                        <span class="status-badge upcoming">Upcoming</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Infrastructure & Construction</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value neutral">0</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">📈</span>
+                                <span class="detail-label">Price Band</span>
+                                <span class="detail-value">₹88 - ₹93</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1200 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">42 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">NSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">17 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">19 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">24 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- SME IPO Card 2 -->
+                <div class="sme-card" data-status="upcoming" data-company="global-ocean">
+                    <div class="sme-card-header">
+                        <h3>Global Ocean Logistics India Ltd</h3>
+                        <span class="status-badge upcoming">Upcoming</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Logistics and Transportation</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value neutral">0</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">📈</span>
+                                <span class="detail-label">Price Band</span>
+                                <span class="detail-value">₹74 - ₹78</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1600 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">30 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">BSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">17 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">19 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">24 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- SME IPO Card 3 -->
+                <div class="sme-card" data-status="open" data-company="neptune-logitek">
+                    <div class="sme-card-header">
+                        <h3>Neptune Logitek Ltd</h3>
+                        <span class="status-badge open">Open</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Logistics and Transportation</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value neutral">0</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Price</span>
+                                <span class="detail-value">₹126</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1000 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">46 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">BSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step active">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">15 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">17 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">22 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- SME IPO Card 4 -->
+                <div class="sme-card" data-status="open" data-company="stanbik-agro">
+                    <div class="sme-card-header">
+                        <h3>Stanbik Agro Ltd</h3>
+                        <span class="status-badge open">Open</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Agriculture & Food Processing</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value positive">+₹5</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">📈</span>
+                                <span class="detail-label">Price Band</span>
+                                <span class="detail-value">₹95 - ₹100</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1200 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">25 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">NSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step active">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">16 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">18 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">23 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- SME IPO Card 5 -->
+                <div class="sme-card" data-status="open" data-company="ashwini-container">
+                    <div class="sme-card-header">
+                        <h3>Ashwini Container Movers</h3>
+                        <span class="status-badge open">Open</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Logistics and Transportation</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value positive">+₹8</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">📈</span>
+                                <span class="detail-label">Price Band</span>
+                                <span class="detail-value">₹85 - ₹90</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1400 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">18 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">BSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step active">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">14 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">16 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">21 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+
+                <!-- SME IPO Card 6 -->
+                <div class="sme-card" data-status="open" data-company="exim-routes">
+                    <div class="sme-card-header">
+                        <h3>Exim Routes Ltd</h3>
+                        <span class="status-badge open">Open</span>
+                    </div>
+                    <div class="sme-card-sector">
+                        <span>Import & Export</span>
+                    </div>
+                    <div class="sme-card-gmp">
+                        <span class="gmp-label">GMP:</span>
+                        <span class="gmp-value positive">+₹12</span>
+                    </div>
+                    
+                    <div class="sme-card-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">📈</span>
+                                <span class="detail-label">Price Band</span>
+                                <span class="detail-value">₹110 - ₹115</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📊</span>
+                                <span class="detail-label">Lot Size</span>
+                                <span class="detail-value">1000 shares</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span class="detail-label">Issue Size</span>
+                                <span class="detail-value">35 Cr</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏢</span>
+                                <span class="detail-label">Exchange</span>
+                                <span class="detail-value">NSE SME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-timeline">
+                        <div class="timeline-step active">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Open</span>
+                                <span class="timeline-date">13 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Close</span>
+                                <span class="timeline-date">17 Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Listing</span>
+                                <span class="timeline-date">20 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sme-card-actions">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    <!
+-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>72ipo</h4>
+                    <p>Your trusted source for IPO information, analysis, and investment insights since 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>SME IPOs</h4>
+                    <a href="#">SME Dashboard</a>
+                    <a href="#">SME Calendar</a>
+                    <a href="#">SME Performance Track</a>
+                    <a href="#">SME Subscription Data</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="#">IPO Calculator</a>
+                    <a href="#">GMP Tracker</a>
+                    <a href="#">Allotment Status</a>
+                    <a href="#">IPO Alerts</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Learn IPO</a>
+                    <a href="#">IPO Guide</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Tips</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 72ipo. All rights reserved. | Disclaimer: Information provided is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/sme-dashboard.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
